@@ -1,0 +1,131 @@
+
+body {
+    background-color: #000;
+    color: #FFD700;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    background-color: #333;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0px 0px 20px rgba(255, 215, 0, 0.4);
+}
+
+
+#screen {
+    margin-bottom: 20px;
+}
+
+#expression {
+    width: 95%;
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 8px;
+    border: none;
+    background-color: #222;
+    color: #FFD700;
+    text-align: right;
+   
+}
+
+
+#buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+#rows{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+button {
+    background-color: #444;
+    color: #FFD700;
+    padding: 20px ;
+    width: 70px;
+    border-radius: 50%;
+    font-size: 18px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #FFD700; 
+    color: #000; 
+    box-shadow: 0 4px 8px rgba(255, 215, 0, 0.6); 
+}
+
+
+
+
+button#equal {
+    background-color: #FFD700;
+    color: #000;
+}
+
+button#equal:hover {
+    background-color: #FFD500;
+}
+
+
+button.operator {
+    font-size: 24px;
+    padding: 25px;
+}
+
+
+@media (max-width: 600px) {
+    #expression {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 15px;
+    }
+}
+@keyframes shake {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0, 0); }
+}
+
+.shake {
+    animation: shake 0.5s;
+}
+.box{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+.history{
+    width: 400px;
+    height: 57vh;
+}
+.history h2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 100;
+
+}
+.history{
+    display: block;
+    overflow-y: auto;
+}
